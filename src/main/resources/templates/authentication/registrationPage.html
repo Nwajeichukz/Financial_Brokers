@@ -1,0 +1,62 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/authentication/registration.css}">
+</head>
+<body>
+<div class="container">
+    <div class="form-box">
+        <h2>This is the Registration Page</h2>
+        <form th:action="@{/auth/register}" method="post" th:object="${registrationDto}">
+            <div class="form-group">
+                <div class="form-item">
+                    <label class="text-label"> Full name: </label>
+                    <input type="text" id="fullName" placeholder="Your full name" th:field="*{fullName}" required>
+                </div>
+                <div class="form-item">
+                    <label class="text-label"> Username: </label>
+                    <input type="text" id="userName" placeholder="Your username" th:field="*{userName}" required>
+                </div>
+
+                <div class="form-item">
+                    <label class="text-label-wrapper">
+                        <span class="text-label"> Email: </span>
+                        <span th:if="${errorMessage}" th:text="${errorMessage}" class="error-message"></span>
+                    </label>
+                    <input type="text" id="email" placeholder="Your email address" th:field="*{email}" required>
+                </div>
+                <div class="form-item">
+                    <label class="text-label"> Phone Number: </label>
+                    <input type="text" id="phoneNumber" placeholder="Your phone number" th:field="*{phoneNumber}" required>
+                </div>
+                <div class="form-item">
+                    <label class="text-label"> Country:</label>
+                    <input type="text" id="country" placeholder="Your Country" th:field="*{country}" required>
+                </div>
+                <div class="form-item">
+                    <label class="text-label"> Referral ID (Optional):</label>
+                    <input type="text" id="referralId" placeholder="referral id" th:field="*{referralId}">
+                </div>
+                <div class="form-item">
+                    <label for="password" class="text-label">Password:</label>
+                    <input type="password" id="password" placeholder="password" th:field="*{password}" required>
+                </div>
+
+                <div class="form-item">
+                    <label for="confirmPassword" class="text-label-wrapper">
+                        <span class="text-label">Confirm password:</span>
+                        <span th:if="${error}" th:text="${error}" class="error-message"></span>
+                    </label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm password" th:field="*{confirmPassword}" required>
+                </div>
+                <button type="submit">Get Started</button><br>
+                <p class="signIn-account">Already have an Account <a th:href="@{/auth/signIn}">login</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="image-box">
+        <img th:src="@{/pictures/office.jpg}" alt="Registration Image">
+    </div>
+</div>
+</body>
+</html>

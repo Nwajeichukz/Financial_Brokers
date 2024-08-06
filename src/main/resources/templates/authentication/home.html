@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>home page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/authentication/home.css}">
+
+</head>
+<body>
+
+    <div class="vertical-navbar" id="vertical-nav">
+        <ul class="nav-links">
+            <li><a th:href="@{/auth/homePage}">Home</a></li>
+            <li><a th:href="@{/auth/signUp}">Sign Up</a></li>
+            <li><a th:href="@{/auth/signIn}">Login</a></li>
+            <li><a th:href="@{/auth/contact-us}">Contact Us</a></li>
+            <li><a th:href="@{/auth/about-us}">About Us</a></li>
+            <li><a th:href="@{/auth/privacy-policy}">Privacy Policy</a></li>
+        </ul>
+    </div>
+
+
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="logo-text">
+                Myfxtrade
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="horizontal-links">
+                <li><a th:href="@{/auth/homePage}">Home</a></li>
+                <li><a th:href="@{/auth/signUp}">Sign Up</a></li>
+                <li><a th:href="@{/auth/signIn}">Login</a></li>
+                <li><a th:href="@{/auth/contact-us}">Contact Us</a></li>
+                <li><a th:href="@{/auth/about-us}">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header-content">
+        <h4 class="header-content_head">Experience the Difference</h4>
+        <p>Myfxtrade is the world’s leading trading and mining platform that allows people to</p>
+        <p>grow their portfolio and financial experience</p>
+        <div class="button-container">
+            <a th:href="@{/auth/signIn}" class="button">Get Started</a>
+        </div>
+
+    </div>
+
+
+
+    <div class="video-wrap">
+        <video autoplay="" loop="" muted="" class="custom-video" poster="">
+            <source th:src="@{/videos/video.mp4}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+
+</body>
+</html>
+

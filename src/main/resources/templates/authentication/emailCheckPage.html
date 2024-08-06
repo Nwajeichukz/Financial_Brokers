@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>check email Page</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/authentication/emailCheck.css}">
+
+</head>
+<body>
+<div class="email-container">
+    <h2>ENTER ADDRESS BELOW </h2>
+    <form th:action="@{/auth/emailCheck}" method="post" th:object="${authenticationDto}">
+        <label class="text-label"> Email: </label>
+        <input type="text" id="email" placeholder="Your email address" th:field="*{email}" required>
+
+        <span th:if="${error}" th:text="${error}" class="error-message"></span>
+        <span th:if="${correct}" th:text="${correct}" class="correct-message"></span>
+
+        <button type="submit">SUBMIT</button>
+
+    </form>
+</div>
+</body>
+</html>
