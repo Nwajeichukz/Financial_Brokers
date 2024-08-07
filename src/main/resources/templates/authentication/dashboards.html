@@ -1,0 +1,122 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>dashboard page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/authentication/dashboards.css}">
+
+</head>
+
+<body>
+<div class="vertical-navbar" id="vertical-nav">
+    <div class="logo-text">Myfxtrade</div>
+        <ul class="nav-links">
+            <li>
+                <div class="nave-icon-box">
+                    <img th:src="@{/pictures/home.png}" alt="home image">
+                </div>
+                <a th:href="@{/auth/homePage}">Home</a>
+            </li>
+            <li>
+                <div class="nave-icon-box">
+                    <img th:src="@{/pictures/menu.png}" alt="menu image">
+                </div>
+                <a th:href="@{/}">Dashboard</a>
+            </li>
+            <li>
+                <div class="nave-icon-box">
+                    <img th:src="@{/pictures/user.png}" alt="profile image">
+                </div>
+                <a th:href="@{/}">Profile</a>
+            </li>
+            <li>
+                <div class="nave-icon-box">
+                    <img th:src="@{/pictures/reciept.png}" alt="receipt image">
+                </div>
+                <a th:href="@{/}">Receipts</a>
+            </li>
+            <li>
+                <div class="nave-icon-box">
+                    <img th:src="@{/pictures/wallet.png}" alt="deposit image">
+                </div>
+                <a th:href="@{/}">Deposit</a>
+            </li>
+            <li>
+                <div class="nave-icon-box">
+                    <img th:src="@{/pictures/withdraw.png}" alt="withdraw image">
+                </div>
+                <a th:href="@{/}">Withdraw</a>
+            </li>
+            <li>
+                <div class="nave-icon-box">
+                    <img th:src="@{/pictures/charts.png}" alt="charts image">
+                </div>
+                <a th:href="@{/}">Charts</a>
+            </li>
+            <li>
+                <div class="nave-icon-box">
+                    <img th:src="@{/pictures/calender.png}" alt="calender image">
+                </div>
+                <a th:href="@{/}">Calendar</a>
+            </li>
+            <li>
+                <div class="nave-icon-box">
+                    <img th:src="@{/pictures/setting.png}" alt="settings image">
+                </div>
+                <a th:href="@{/}">Settings</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="name-text">Nwajei Chukwudi</div>
+        </div>
+        <div class="navbar-right">
+            <ul class="horizontal-links">
+                <li>
+                   <div class="nav-right-icon">
+                       <a th:href="@{/}"><img th:src="@{/pictures/exit.png}" alt="log out"></a>
+                   </div>
+
+                    </li>
+                <li>
+                    <div class="nav-right-icon">
+                        <a th:href="@{/}"><img th:src="@{/pictures/notification.png}" alt="notify"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="account-section">
+        <div class="account-hero">
+            <div>0.00</div>
+            <p>Account Balance</p>
+        </div>
+        <div class="account-hero">
+            <div>0</div>
+            <p>Today's Trade</p>
+        </div>
+        <div class="account-hero">
+            <div>0.00</div>
+            <p>Total Revenue</p>
+        </div>
+    </div>
+
+    <div class="bank-section">
+        <div class="bank-hero">
+            <div class="icon-box">
+                <img th:src="@{/pictures/smartphone.png}" alt="funding image">
+            </div>
+            <p>Fund Account</p>
+        </div>
+        <div class="bank-hero">
+            <div class="icon-box">
+                <img th:src="@{/pictures/bank.png}" alt="withdraw image">
+            </div>
+            <p>Withdraw Funds</p>
+        </div>
+    </div>
+</body>
+
+</html>

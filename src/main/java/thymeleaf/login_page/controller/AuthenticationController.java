@@ -25,6 +25,10 @@ public class AuthenticationController {
     public String show(){
         return "authentication/home";
     }
+    @GetMapping("/dash")
+    public String dash(){
+        return "authentication/dashboards";
+    }
 
     @GetMapping("/emailPage")
     public String emailPage(AuthenticationDto authenticationDto){ return "authentication/emailCheckPage";}

@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light ash color */
+
+    overflow: hidden;
+}
+.vertical-navbar {
+    position: fixed; /* Make the navbar fixed */
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1000; /* Ensure it stays below the navbar */
+}
+
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    margin-left: 0;
+    display: block;
+    transition: background 0.3s;
+    width: calc(100% - 30px);
+    box-sizing: border-box;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+}
+
+.nave-icon-box {
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+.nave-icon-box img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+
+}
+
+.navbar {
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Align it to the top */
+    width: 100%; /* Make it span the full width of the page */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    z-index: 999; /* Ensure it stays on top of other content */
+}
+
+
+.name-text {
+    font-size: 1.0em;
+    font-weight: bold;
+    color: white;
+    margin-left: 200px;
+    color: black;
+
+}
+
+
+.horizontal-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-links li {
+    margin-right: 10px;
+    color: black;
+}
+
+.horizontal-links a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.horizontal-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+
+.nav-right-icon {
+    margin-right: 10px;
+}
+
+.nav-right-icon img {
+    width: 20px;
+    height: 20px;
+}
+.account-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 45px; /* Adjust margin-top for spacing from the navbar */
+    margin-left: 190px; /* Adjust margin-left for spacing from the vertical navbar */
+    margin-bottom: 10px;
+    padding: 20px;
+    width: calc(100% - 220px); /* Adjust width considering the vertical navbar width */
+}
+
+.account-hero {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+}
+
+.account-hero div {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.account-hero p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+
+.bank-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 45px;
+    margin-left: 190px; /* Adjust margin-left for spacing from the vertical navbar */
+    padding: 20px;
+    width: calc(100% - 220px); /* Adjust width considering the vertical navbar width */
+}
+
+.bank-hero {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+}
+
+.bank-hero div {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.bank-hero p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+ .icon-box {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px; /* Center the icon and add margin at the bottom */
+}
+
+.icon-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+
+    .account-section {
+        flex-direction: column;
+        margin-left: 95px; /* Adjust margin-left for spacing from the vertical navbar */
+        margin-bottom: 0;
+        width: calc(100% - 20px);
+    }
+
+    .account-hero {
+        width: 50%;
+
+    }
+
+     .horizontal-links li {
+         padding: 0 0;
+     }
+     .horizontal-links a {
+         padding: 0 0;
+
+     }
+
+    .bank-section {
+        flex-direction: column;
+        margin-left: 95px;
+        margin-top: 0;
+        padding-top: 0;
+        width: calc(100% - 20px);
+    }
+
+
+    .bank-hero {
+        width: 50%;
+
+    }
+
+    .icon-box {
+        width: 33px;
+        height: 20px;
+        margin: 0 auto 10px; /* Center the icon and add margin at the bottom */
+    }
+
+    .icon-box img {
+        max-width: 70%;
+        max-height: 70%;
+    }

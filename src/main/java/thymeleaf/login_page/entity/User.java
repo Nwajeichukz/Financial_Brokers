@@ -26,13 +26,14 @@ public class User {
     private String country;
     private String referralId;
     private String password;
+    private double accountBalance;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    private Role roles;
 
     private LocalDateTime codeGeneratedTime;
 
     private String confirmationToken;
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private Role roles;
 
 
 }

@@ -91,6 +91,7 @@ public class AuthenticationServiceImpl implements AuthenticationService{
         user.setEmail(registrationDto.getEmail());
         user.setPhoneNumber(registrationDto.getPhoneNumber());
         user.setReferralId(registrationDto.getReferralId());
+        user.setAccountBalance(0.00);
 
 
         if (!registrationDto.getPassword().equals(registrationDto.getConfirmPassword())) {

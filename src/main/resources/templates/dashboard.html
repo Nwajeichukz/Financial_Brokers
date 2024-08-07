@@ -2,13 +2,28 @@
 <head>
     <meta charset="UTF-8">
     <title>dashboard page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/dashboard/dashboard.css}">
+
 </head>
 <body>
 
-<h4> WELCOME TO OUR DASHBOARD</h4>
+    <div class="vertical-navbar" id="vertical-nav">
 
-<h4> THIS SERVICE NOW PROCESSING</h4>
-<h4> WE WILL BE BACK ONLINE SOON</h4>
+        <div class="logo-text">
+            Myfxtrade
+        </div>
+
+        <ul class="nav-links">
+            <li><a th:href="@{/}">Dashboard</a></li>
+            <li><a th:href="@{/}">User</a></li>
+            <li><a th:href="@{/}">Login</a></li>
+            <li><a th:href="@{/}">Receipts</a></li>
+            <li><a th:href="@{/}">Deposit</a></li>
+            <li><a th:href="@{/}">withdraws</a></li>
+            <li><a th:href="@{/}">Charts</a></li>
+            <li><a th:href="@{/}">Calender</a></li>
+        </ul>
+    </div>
 
 
 </body>
