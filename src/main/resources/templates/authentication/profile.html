@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/authentication/profile.css}">
+</head>
+<body>
+<div class="container">
+    <div class="profile-box">
+        <div class="icon-box">
+            <img th:src="@{/pictures/camera.png}" alt="settings image">
+        </div>
+        <div class="user-profile">
+            <div class="profile-properties">
+                <label class="text-label">Full name:</label>
+                <div class="profile-list">USERS FULL NAME IS VERY LONG</div>
+            </div>
+            <div class="profile-properties">
+                <label class="text-label">Username:</label>
+                <div class="profile-list">UserNameStyle</div>
+            </div>
+            <div class="profile-properties">
+                <label class="text-label">Email:</label>
+                <div class="profile-list">user@GMAIL.COM</div>
+            </div>
+            <div class="profile-properties">
+                <label class="text-label">Phone Number:</label>
+                <div class="profile-list">0000000000</div>
+            </div>
+            <div class="profile-properties">
+                <label class="text-label">Country:</label>
+                <div class="profile-list">User Country</div>
+            </div>
+            <div class="profile-properties">
+                <label class="text-label">State:</label>
+                <div class="profile-list">User Current State</div>
+            </div>
+            <div class="profile-properties">
+                <label class="text-label">City:</label>
+                <div class="profile-list">User Current City</div>
+            </div>
+            <div class="profile-properties">
+                <label class="text-label">Postal Code:</label>
+                <div class="profile-list">0000</div>
+            </div>
+            <p><a th:href="@{/auth/dash}">Back to Dashboard</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

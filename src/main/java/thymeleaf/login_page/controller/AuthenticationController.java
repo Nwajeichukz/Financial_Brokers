@@ -46,7 +46,9 @@ public class AuthenticationController {
     @GetMapping("/changePassword")
     public String resetPassword(ResetPasswordDto resetPasswordDto){ return "authentication/resetPasswordPage";
     }
-
+    @GetMapping("/profilePage")
+    public String resetPassword(){ return "authentication/profile";
+    }
     @PostMapping("login")
     public String loginProcess(@ModelAttribute("authenticationDto") AuthenticationDto authenticationDto, Model model, HttpSession session){
         return authenticationServiceImpl.userLogin(authenticationDto, model, session);

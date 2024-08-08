@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light grey background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.profile-box {
+    width: 100%;
+}
+
+.icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-box img {
+    width: 80px;
+    height: 80px;
+}
+
+.user-profile {
+    width: 100%;
+    align-items: center;
+
+}
+
+.profile-properties {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.profile-properties:nth-child(odd) {
+    background-color: #e6f7ff; /* Very light blue */
+}
+
+.profile-properties:nth-child(even) {
+    background-color: #f2f2f2; /* Very light grey */
+}
+
+.text-label {
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 10px;
+    color: black;
+    width: 150px; /* Adjust the width as needed */
+    flex-shrink: 0;
+}
+
+.profile-list {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+p a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
