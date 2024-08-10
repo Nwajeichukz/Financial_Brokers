@@ -1,14 +1,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>dashboard page</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/authentication/dashboards.css}">
+    <title>welcome page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/dashboard/welcome.css}">
 
 </head>
-
 <body>
-<div class="vertical-navbar" id="vertical-nav">
-    <div class="logo-text">Myfxtrade</div>
+    <div class="vertical-navbar" id="vertical-nav">
+        <div class="logo-text">Myfxtrade</div>
         <ul class="nav-links">
             <li>
                 <div class="nave-icon-box">
@@ -20,25 +19,25 @@
                 <div class="nave-icon-box">
                     <img th:src="@{/pictures/menu.png}" alt="menu image">
                 </div>
-                <a th:href="@{/auth/dash}">Dashboard</a>
+                <a th:href="@{/dash/welcomePage}">Dashboard</a>
             </li>
             <li>
                 <div class="nave-icon-box">
                     <img th:src="@{/pictures/user.png}" alt="profile image">
                 </div>
-                <a th:href="@{/auth/profilePage}">Profile</a>
+                <a th:href="@{/dash/profilePage}">Profile</a>
             </li>
             <li>
                 <div class="nave-icon-box">
                     <img th:src="@{/pictures/reciept.png}" alt="receipt image">
                 </div>
-                <a th:href="@{/}">Receipts</a>
+                <a th:href="@{/dash/receiptPage}">Receipts</a>
             </li>
             <li>
                 <div class="nave-icon-box">
                     <img th:src="@{/pictures/wallet.png}" alt="deposit image">
                 </div>
-                <a th:href="@{/}">Deposit</a>
+                <a th:href="@{/dash/depositPage}">Deposit</a>
             </li>
             <li>
                 <div class="nave-icon-box">
@@ -67,6 +66,7 @@
         </ul>
     </div>
 
+
     <div class="navbar">
         <div class="navbar-left">
             <div class="name-text">Nwajei Chukwudi</div>
@@ -74,11 +74,11 @@
         <div class="navbar-right">
             <ul class="horizontal-links">
                 <li>
-                   <div class="nav-right-icon">
-                       <a th:href="@{/}"><img th:src="@{/pictures/exit.png}" alt="log out"></a>
-                   </div>
+                    <div class="nav-right-icon">
+                        <a th:href="@{/}"><img th:src="@{/pictures/exit.png}" alt="log out"></a>
+                    </div>
 
-                    </li>
+                </li>
                 <li>
                     <div class="nav-right-icon">
                         <a th:href="@{/}"><img th:src="@{/pictures/notification.png}" alt="notify"></a>
@@ -117,6 +117,7 @@
             <p>Withdraw Funds</p>
         </div>
     </div>
-</body>
 
+
+</body>
 </html>

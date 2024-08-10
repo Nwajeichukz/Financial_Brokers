@@ -47,11 +47,12 @@ public class AuthenticationServiceImpl implements AuthenticationService{
 
     @Override
     public String userLogin(AuthenticationDto authenticationDto, Model model, HttpSession session) {
+        String authEmailFromDto = authenticationDto.getEmail().toLowerCase();
 
         try {
-            boolean check = userRepository.existsByEmail(authenticationDto.getEmail().toLowerCase());
+            boolean check = userRepository.existsByEmail(authEmailFromDto);
 
-            var user = myUserDetailsService.loadUserByUsername(authenticationDto.getEmail());
+            var user = myUserDetailsService.loadUserByUsername(authEmailFromDto);
 
             if (!passwordEncoder.matches(authenticationDto.getPassword(), user.getPassword())){
                 model.addAttribute("error", "Email or password is incorrect");
@@ -63,13 +64,14 @@ public class AuthenticationServiceImpl implements AuthenticationService{
             session.setAttribute("jwtToken", jwtToken);
             session.setAttribute("user", user);
 
-            return "redirect:/dashboardPage";
+
+
+            return "redirect:/dash/welcomePage";
 
         }catch (UsernameNotFoundException e) {
             model.addAttribute("error", "Email or password is incorrect");
             return "authentication/loginPage";
         }
-
     }
 
     @Override
@@ -91,7 +93,6 @@ public class AuthenticationServiceImpl implements AuthenticationService{
         user.setEmail(registrationDto.getEmail());
         user.setPhoneNumber(registrationDto.getPhoneNumber());
         user.setReferralId(registrationDto.getReferralId());
-        user.setAccountBalance(0.00);
 
 
         if (!registrationDto.getPassword().equals(registrationDto.getConfirmPassword())) {

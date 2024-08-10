@@ -26,7 +26,6 @@ public class User {
     private String country;
     private String referralId;
     private String password;
-    private double accountBalance;
 
 
     private LocalDateTime codeGeneratedTime;

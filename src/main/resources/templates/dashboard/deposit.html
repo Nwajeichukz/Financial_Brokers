@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Deposit Page</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/dashboard/deposit.css}">
+
+</head>
+<body>
+<div class="deposit-container">
+    <span th:if="${correct}" th:text="${correct}" class="correct-message"></span>
+
+    <h2>MAKE DEPOSITS</h2>
+    <form th:action="@{//}" method="post" th:object="${depositDto}">
+        <label class="text-label"> Amount: </label>
+        <input type="text" id="amount" placeholder="0.00" th:field="*{amount}">
+
+        <label class="text-label">Payment Method:</label>
+        <input type="password" id="password" placeholder="enter method" th:field="*{paymentMethod}">
+
+        <span th:if="${error}" th:text="${error}" class="error-message"></span>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

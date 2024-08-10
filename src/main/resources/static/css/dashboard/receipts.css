@@ -1,0 +1,52 @@
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light grey background color */
+    margin: 0;
+    padding: 20px;
+}
+
+    .receipt-container {
+    background-color: #fff; /* White background for the receipt */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Spacing between receipt containers */
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+.receipt-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex; /* Use Flexbox to align items horizontally */
+}
+
+.receipt-list li {
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center; /* Center the text within each list item */
+    border-right: 1px solid #f0f0f0; /* Light grey line between items */
+    flex: 1; /* Ensure each list item takes up equal space */
+}
+
+.receipt-list li:last-child {
+    border-right: none; /* Remove the border on the last item */
+}
+
+@media screen and (max-width: 768px) {
+    .receipt-container {
+        padding: 14px;
+        max-width: 90%; /* Full width on small screens */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .receipt-list li {
+        padding: 8px 10px;
+        font-size: 13px; /* Slightly smaller text */
+    }
+}

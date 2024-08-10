@@ -2,6 +2,9 @@ package thymeleaf.login_page.controller;
 
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +12,6 @@ import thymeleaf.login_page.dto.AuthenticationDto;
 import thymeleaf.login_page.dto.RegistrationDto;
 import thymeleaf.login_page.dto.ResetPasswordDto;
 import thymeleaf.login_page.service.user.AuthenticationService;
-import thymeleaf.login_page.service.user.AuthenticationServiceImpl;
 
 import javax.servlet.http.HttpSession;
 
@@ -24,10 +26,6 @@ public class AuthenticationController {
     @GetMapping("/homePage")
     public String show(){
         return "authentication/home";
-    }
-    @GetMapping("/dash")
-    public String dash(){
-        return "authentication/dashboards";
     }
 
     @GetMapping("/emailPage")
@@ -46,9 +44,7 @@ public class AuthenticationController {
     @GetMapping("/changePassword")
     public String resetPassword(ResetPasswordDto resetPasswordDto){ return "authentication/resetPasswordPage";
     }
-    @GetMapping("/profilePage")
-    public String resetPassword(){ return "authentication/profile";
-    }
+
     @PostMapping("login")
     public String loginProcess(@ModelAttribute("authenticationDto") AuthenticationDto authenticationDto, Model model, HttpSession session){
         return authenticationServiceImpl.userLogin(authenticationDto, model, session);
